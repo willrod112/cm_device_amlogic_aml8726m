@@ -23,10 +23,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=novo8 BUILD_ID=GRK39F BUILD_DISPLAY
 # Extra AML8726-M overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/amlogic/aml8726m/overlay
 
-# Accelerometer hacks
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.gsensorposition=4
-
 #
 # Set ro.modversion
 #

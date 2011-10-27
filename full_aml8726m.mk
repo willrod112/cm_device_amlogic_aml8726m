@@ -56,10 +56,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dexopt-flags=m=y \
     dalvik.vm.heapsize=32m \
     persist.sys.use_16bpp_alpha=1 \
-    ro.additionalmounts=/mnt/nand;/mnt/usb \
-    ro.vold.switchablepair=/mnt/sdcard,/mnt/nand \
-    ro.opengles.version=131072 \
     qemu.sf.lcd_density=240 \
+    ro.additionalmounts=/mnt/nand;/mnt/usb \
+    ro.opengles.version=131072 \
+    ro.sf.gsensorposition=4 \
+    ro.vold.switchablepair=/mnt/sdcard,/mnt/nand \
     wifi.interface=eth0 \
     wifi.supplicant_scan_interval=45
 
