@@ -1,5 +1,7 @@
 on early-init
     start ueventd
+    write /sys/class/graphics/fb0/blank 0
+    write /sys/class/graphics/fb1/blank 1
 
 on init
     export PATH /sbin
@@ -25,17 +27,12 @@ on boot
     hostname localhost
     domainname localdomain
 
-    write /sys/class/graphics/fb0/blank 0
-    write /sys/class/graphics/fb1/blank 1
     write /sys/power/wake_lock true
 
     class_start default
 
 service ueventd /sbin/ueventd
     critical
-
-service display /sbin/busybox sh /sbin/set_display_mode.sh panel
-    oneshot
 
 service recovery /sbin/recovery
 
